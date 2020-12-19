@@ -16,4 +16,8 @@
     <string name="deletedata">DeleteData</string>
     <string name="querydata">QueryData</string>
     <string name="rememberPass">记住密码</string>
+    <string name="broadcast">实验二</string>
+    <string name="dynamicRegiste">动态注册</string>
+    <string name="MyBroaadcast">自定义接收与广播</string>
+    <string name="MyReceiver">静态注册广播</string>
 </resources>
