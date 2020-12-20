@@ -7,6 +7,9 @@ import android.net.ConnectivityManager;
 import android.net.Network;
 import android.widget.Toast;
 
+/**
+ * @author ylqq
+ */
 public class NetChangeReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {

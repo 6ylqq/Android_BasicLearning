@@ -19,5 +19,9 @@
     <string name="broadcast">实验二</string>
     <string name="dynamicRegiste">动态注册</string>
     <string name="MyBroaadcast">自定义接收与广播</string>
-    <string name="MyReceiver">静态注册广播</string>
+    <string name="MyReceiver">状态栏显示通知</string>
+    <string name="pendingintent_activity">使用PendingIntent打开通知Activity</string>
+    <string name="channel_name">BootBroadcastReceiver</string>
+    <string name="channel_description">状态栏通知</string>
+
 </resources>
