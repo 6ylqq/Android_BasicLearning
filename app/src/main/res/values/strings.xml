@@ -29,5 +29,9 @@
     <string name="camera">Camera</string>
     <string name="video">Video</string>
     <string name="contactsinfo">contactsInfo</string>
+    <string name="your_location">your location</string>
+    <string name="resume">resume</string>
+    <string name="play">play</string>
+    <string name="pause">Pause</string>
 
 </resources>
