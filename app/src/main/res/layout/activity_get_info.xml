@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".getInfo.GetInfoActivity">
+
+    <Button
+        android:id="@+id/btn_contentResolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@string/contentresolver"
+        app:layout_constraintEnd_toEndOf="@+id/btn_cursor"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="@+id/btn_cursor"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_cursor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="61dp"
+        android:text="@string/cursor"
+        app:layout_constraintEnd_toEndOf="@+id/showContacts"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/showContacts"
+        app:layout_constraintTop_toBottomOf="@+id/btn_contentResolver" />
+
+    <Button
+        android:id="@+id/btn_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/gps"
+        app:layout_constraintEnd_toEndOf="@+id/btn_camera"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btn_camera"
+        app:layout_constraintTop_toBottomOf="@+id/showContacts" />
+
+    <Button
+        android:id="@+id/btn_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="61dp"
+        android:text="@string/camera"
+        app:layout_constraintEnd_toEndOf="@+id/btn_video"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btn_video"
+        app:layout_constraintTop_toBottomOf="@+id/btn_gps" />
+
+    <Button
+        android:id="@+id/btn_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        android:text="@string/video"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_camera" />
+
+    <TextView
+        android:id="@+id/showContacts"
+        android:layout_width="359dp"
+        android:layout_height="159dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/contactsinfo"
+        app:layout_constraintEnd_toEndOf="@+id/btn_gps"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btn_gps"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cursor" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,5 +23,11 @@
     <string name="pendingintent_activity">使用PendingIntent打开通知Activity</string>
     <string name="channel_name">BootBroadcastReceiver</string>
     <string name="channel_description">状态栏通知</string>
+    <string name="contentresolver">ContentResolver</string>
+    <string name="cursor">cursor</string>
+    <string name="gps">GPS</string>
+    <string name="camera">Camera</string>
+    <string name="video">Video</string>
+    <string name="contactsinfo">contactsInfo</string>
 
 </resources>
