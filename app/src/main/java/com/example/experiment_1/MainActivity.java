@@ -4,11 +4,8 @@ import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.BroadcastReceiver;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.BitmapFactory;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,10 +22,9 @@ import com.example.experiment_1.broadcast.NetChangeReceiver;
  */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private static final String CHANNEL_ID = "BootBroadcastReceiverId";
     private NetChangeReceiver netChangeReceiver;
     private MyBroadcastReceiver myBroadcastReceiver;
-    private static final String CHANNEL_ID = "BootBroadcastReceiverId";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +35,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initView() {
         Button toExOne = findViewById(R.id.toEx1);
-        Button btn_receiver=findViewById(R.id.btn_receiver);
-        Button btn_register=findViewById(R.id.btn_register);
-        Button btn_mySelf=findViewById(R.id.btn_mySelf);
-        Button btn_pendingIntent=findViewById(R.id.btn_pendingIntent);
+        Button btn_receiver = findViewById(R.id.btn_receiver);
+        Button btn_register = findViewById(R.id.btn_register);
+        Button btn_mySelf = findViewById(R.id.btn_mySelf);
+        Button btn_pendingIntent = findViewById(R.id.btn_pendingIntent);
 
         toExOne.setOnClickListener(this);
         btn_mySelf.setOnClickListener(this);
@@ -62,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_register:
                 //动态注册监听网络
-                netChangeReceiver= new NetChangeReceiver();
+                netChangeReceiver = new NetChangeReceiver();
                 IntentFilter netConnIntentFilter = new IntentFilter();
                 netConnIntentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
                 this.registerReceiver(netChangeReceiver, netConnIntentFilter);
@@ -83,12 +79,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 NotificationChannel notificationChannel = new NotificationChannel("AppTestNotificationId", "AppTestNotificationName", NotificationManager.IMPORTANCE_DEFAULT);
                 NotificationManagerCompat notificationManagerText = NotificationManagerCompat.from(this);
                 notificationManagerText.createNotificationChannel(notificationChannel);
-                notificationManagerText.notify(1,notification2);
+                notificationManagerText.notify(1, notification2);
             case R.id.btn_pendingIntent:
-                Intent intent1=new Intent(this,LoginActivity.class);
-                PendingIntent pendingIntent=PendingIntent.getActivity(this,0,intent1,PendingIntent.FLAG_CANCEL_CURRENT);
+                Intent intent1 = new Intent(this, LoginActivity.class);
+                PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent1, PendingIntent.FLAG_CANCEL_CURRENT);
                 NotificationManager notificationManager = getSystemService(NotificationManager.class);
-                Notification notification=new NotificationCompat.Builder(this,getString(R.string.app_name))
+                Notification notification = new NotificationCompat.Builder(this, getString(R.string.app_name))
                         .setContentTitle("PendingIntent")
                         .setContentText("hello pendingIntent")
                         .setWhen(System.currentTimeMillis())
@@ -101,14 +97,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mChannel.setDescription("notification channel");
                 notificationManager.createNotificationChannel(mChannel);
                 System.out.println("hi");
-                notificationManager.notify(2,notification);
+                notificationManager.notify(2, notification);
                 break;
-            default:break;
+            default:
+                break;
         }
     }
 
     /**
-     *自定义发送广播
+     * 自定义发送广播
      */
     private void sentBroadcast() {
         Intent intent = new Intent("myself");

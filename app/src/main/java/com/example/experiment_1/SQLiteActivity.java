@@ -5,8 +5,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.provider.BaseColumns;
-import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -39,7 +37,7 @@ public class SQLiteActivity extends AppCompatActivity {
         final Button queryData = findViewById(R.id.queryData);
 
 
-        createDb.setOnClickListener(v -> Toast.makeText(getApplicationContext(),"DataBase has been created!",Toast.LENGTH_LONG).show());
+        createDb.setOnClickListener(v -> Toast.makeText(getApplicationContext(), "DataBase has been created!", Toast.LENGTH_LONG).show());
 
         addData.setOnClickListener(v -> {
 
@@ -52,8 +50,8 @@ public class SQLiteActivity extends AppCompatActivity {
 
             //插入输入，返回新插入行的主键
             long newRowId = database.insert(FeedReaderContract.FeedEntry.TABLE_NAME, null, values);
-            if(newRowId!=0){
-                Toast.makeText(getApplicationContext(),"Data has been inserted!",Toast.LENGTH_LONG).show();
+            if (newRowId != 0) {
+                Toast.makeText(getApplicationContext(), "Data has been inserted!", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -68,12 +66,12 @@ public class SQLiteActivity extends AppCompatActivity {
 
             int count = database.update(
                     FeedReaderContract.FeedEntry.TABLE_NAME,
-                        values,
+                    values,
                     selection,
                     selectionArgs
-                    );
-            if (count!=0){
-                Toast.makeText(getApplicationContext(),"Data has been updated!",Toast.LENGTH_LONG).show();
+            );
+            if (count != 0) {
+                Toast.makeText(getApplicationContext(), "Data has been updated!", Toast.LENGTH_LONG).show();
             }
 
         });
@@ -85,8 +83,8 @@ public class SQLiteActivity extends AppCompatActivity {
 
             //返回删除的行数
             int deletedRows = database.delete(FeedReaderContract.FeedEntry.TABLE_NAME, selection, selectionArgs);
-            if (deletedRows!=0){
-                Toast.makeText(getApplicationContext(),"Data has been deleted!",Toast.LENGTH_LONG).show();
+            if (deletedRows != 0) {
+                Toast.makeText(getApplicationContext(), "Data has been deleted!", Toast.LENGTH_LONG).show();
             }
         });
 

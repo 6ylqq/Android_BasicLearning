@@ -1,4 +1,4 @@
-package com.example.experiment_1;
+package com.example.experiment_1.news;
 
 
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.example.experiment_1.R;
 
 /**
  * @author ylqq

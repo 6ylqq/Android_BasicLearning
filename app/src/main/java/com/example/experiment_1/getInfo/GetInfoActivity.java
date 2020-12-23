@@ -79,11 +79,11 @@ public class GetInfoActivity extends AppCompatActivity implements View.OnClickLi
                 }
                 break;
             case R.id.btn_video:
-                Intent intent=new Intent(this,MyVideoActivity.class);
+                Intent intent = new Intent(this, MyVideoActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_camera:
-                Intent intent1=new Intent(this,MyCameraActivity.class);
+                Intent intent1 = new Intent(this, MyCameraActivity.class);
                 startActivity(intent1);
                 break;
             default:

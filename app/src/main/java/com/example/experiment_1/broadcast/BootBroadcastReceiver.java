@@ -32,6 +32,6 @@ public class BootBroadcastReceiver extends BroadcastReceiver {
         NotificationChannel notificationChannel = new NotificationChannel("AppTestNotificationId", "AppTestNotificationName", NotificationManager.IMPORTANCE_DEFAULT);
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
         notificationManager.createNotificationChannel(notificationChannel);
-        notificationManager.notify(1,notification);
+        notificationManager.notify(1, notification);
     }
 }

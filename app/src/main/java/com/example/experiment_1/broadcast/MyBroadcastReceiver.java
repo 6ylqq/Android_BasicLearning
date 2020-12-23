@@ -11,6 +11,6 @@ import android.widget.Toast;
 public class MyBroadcastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        Toast.makeText(context,"The data is"+intent.getStringExtra("data"),Toast.LENGTH_LONG).show();
+        Toast.makeText(context, "The data is" + intent.getStringExtra("data"), Toast.LENGTH_LONG).show();
     }
 }

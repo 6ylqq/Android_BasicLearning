@@ -1,4 +1,4 @@
-package com.example.experiment_1;
+package com.example.experiment_1.news;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,10 +11,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.experiment_1.R;
 import com.example.experiment_1.model.News;
 
 import java.util.List;
-import java.util.Objects;
 
 /**
  * @author ylqq
@@ -34,7 +34,7 @@ public class NewsTitleFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         //双页模式
-        isTwoPane = Objects.requireNonNull(getActivity()).findViewById(R.id.news_content_layout) != null;
+        isTwoPane = requireActivity().findViewById(R.id.news_content_layout) != null;
     }
 
     class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {

@@ -2,7 +2,6 @@ package com.example.experiment_1.getInfo;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -11,12 +10,8 @@ import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.FileProvider;
 
 import com.example.experiment_1.R;
-
-import java.io.File;
-import java.io.IOException;
 
 /**
  * @author ylqq
@@ -25,7 +20,7 @@ public class MyCameraActivity extends AppCompatActivity {
 
 
     private static final int TAKE_PICTURE = 1;
-    private ImageView imageView ;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +28,7 @@ public class MyCameraActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my_camera);
 
         Button btnTackPic = findViewById(R.id.btn_tackPic);
-        imageView= findViewById(R.id.imageView);
+        imageView = findViewById(R.id.imageView);
 
         btnTackPic.setOnClickListener(new View.OnClickListener() {
             @Override

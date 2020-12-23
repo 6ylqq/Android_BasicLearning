@@ -1,10 +1,12 @@
-package com.example.experiment_1;
+package com.example.experiment_1.news;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.experiment_1.R;
 
 /**
  * @author ylqq

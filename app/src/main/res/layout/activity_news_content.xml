@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewsContentActivity">
+    tools:context=".news.NewsContentActivity">
 
     <fragment
         android:id="@+id/news_content_fragment"
-        android:name="com.example.experiment_1.NewsContentFragment"
+        android:name="com.example.experiment_1.news.NewsContentFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
