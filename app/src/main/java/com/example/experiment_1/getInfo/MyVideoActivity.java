@@ -45,21 +45,25 @@ public class MyVideoActivity extends AppCompatActivity implements View.OnClickLi
     private void initVideo() {
         int checkPermission = ContextCompat.checkSelfPermission(
                 this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE);
+                Manifest.permission.READ_EXTERNAL_STORAGE);
         if (checkPermission != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this,
                     new String[]{
-                            Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+                            Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
         } else {
             File file = new File(
                     Environment.getStorageDirectory(),
-                    "./Download/VID_20201213172955.mp4");
+                    "emulated/0/Download/VID_20201213172955.mp4");
             System.out.println(Environment.getStorageDirectory());
             if (file != null) {
                 videoView.setVideoPath(file.getPath());
             } else {
                 Toast.makeText(this, "找不到视频文件", Toast.LENGTH_LONG).show();
             }
+
+            /*播放网络视频
+            String videoPath="http://vfx.mtime.cn/Video/2019/07/12/mp4/190712140656051701.mp4";
+            videoView.setVideoPath(videoPath);*/
         }
     }
 
