@@ -11,6 +11,9 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
     <uses-feature android:name="android.hardware.type.watch" />
 
     <application
@@ -20,7 +23,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Experiment1">
-        <activity android:name=".getInfo.MyCameraActivity"></activity>
+        <activity android:name=".getInfo.MyCameraActivity" />
         <activity android:name=".getInfo.MyVideoActivity" />
         <activity android:name=".getInfo.GetInfoActivity">
             <intent-filter>
@@ -29,6 +32,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.android.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
         <receiver
             android:name=".broadcast.BootCompleteReceiver"
@@ -39,6 +52,7 @@
                 <action android:name="android.intent.action.INPUT_METHOD_CHANGED" />
             </intent-filter>
         </receiver>
+
         <receiver
             android:name=".broadcast.MyBroadcastReceiver"
             android:enabled="true"

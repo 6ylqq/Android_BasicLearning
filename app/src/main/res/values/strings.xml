@@ -33,5 +33,7 @@
     <string name="resume">resume</string>
     <string name="play">play</string>
     <string name="pause">Pause</string>
+    <string name="tack_a_picture">tack a picture</string>
+    <string name="your_picture">your picture</string>
 
 </resources>
